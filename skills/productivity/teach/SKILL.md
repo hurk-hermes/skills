@@ -17,6 +17,7 @@ Treat the current directory as a teaching workspace. The state of their learning
 - `./learning-records/*.md`: A directory of learning records, which capture what the user has learned. These are loosely equivalent to architectural decision records in software development - they capture non-obvious lessons and key insights that may need to be revised later, or drive future sessions. These should be used to calculate the zone of proximal development. They are titled `0001-<dash-case-name>.md`, where the number increments each time. Use the format in [LEARNING-RECORD-FORMAT.md](./LEARNING-RECORD-FORMAT.md).
 - `./lessons/*.html`: A directory of lessons. A **lesson** is a single, self-contained HTML output that teaches one tightly-scoped thing tied to the mission. This is the primary unit of teaching in this workspace.
 - `./assets/*`: Reusable **components** shared across lessons. See [Assets](#assets).
+- `./case-studies/*.html`: A directory of case studies. Similar to a **lesson**, but a **case-study** is very focused on a signle real-world example.
 - `NOTES.md`: A scratchpad for you to jot down user preferences, or working notes.
 
 ## Philosophy
@@ -48,17 +49,32 @@ Fluency can give the user an illusory sense of mastery, but storage strength is 
 
 A lesson is the main thing you produce — the unit in which knowledge and skills reach the user. Each lesson is one self-contained HTML file, saved to `./lessons/` and titled `0001-<dash-case-name>.html` where the number increments each time.
 
-A lesson should be **beautiful** — clean, readable typography and layout — since the user will return to these later to review. Think Tufte.
+A lesson should be **beautiful** — clean, readable typography and layout — since the user will return to these later to review. Think Tufte. Wall-to-wall (full bleed left-right).
 
-The lesson should be short, and completable very quickly. Learners' working memory is very small, and we need to stay within it. But each lesson should give the user a single tangible win that they can build on. It should be directly tied to the mission, and should be in the user's zone of proximal development.
+The lesson should be short, and completable very quickly. Learners' working memory is very small, and we need to stay within it. But each lesson should give the user a single tangible win that they can build on. It should be directly tied to the mission, and should be in the user's zone of proximal development. Include plenty of code samples if applicable.
 
 If possible, open the lesson file for the user by running a CLI command.
 
-Each lesson should link via HTML anchors to other lessons and reference documents.
+Each lesson should link via HTML anchors to other lessons, reference documents and the lessons folder.
 
 Each lesson should recommend a primary source for the user to read or watch. This should be the most high-quality, high-trust resource you found on the topic.
 
-Each lesson should contain a reminder to ask followup questions to the agent. The agent is their teacher, and can assist with anything that's unclear.
+Each lesson should contain
+- A reminder to ask followup questions to the agent. The agent is their teacher, and can assist with anything that's unclear.
+- A list of possible subjects for the next lesson
+- A list of possible case studies to explore (if applicable)
+
+### Remote Lessons
+
+If the user says so (eg "I am remote", "Phone friendly", "no PC") create lessons that can be followed without a development environment.
+
+## Case-studies
+
+Self contained HTML files, saved to `./case-studies/0001-<dash-case-name>.html` where the number increases each time.
+
+Each case study should be tied to the **mission**, but not as tightly as a **lesson**.
+
+Should have the same *look and feel* of **lesson**s. It focuses on a single, well-documented, real world example and explain it in depth.
 
 ## Assets
 
