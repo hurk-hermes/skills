@@ -64,6 +64,17 @@ Each lesson should contain
 - A list of possible subjects for the next lesson
 - A list of possible case studies to explore (if applicable)
 
+### Diagrams
+
+When a mental model benefits from a picture (flows, state, ownership, request paths, “what holds what”), use *Mermaid.js* via CDN
+
+— _Avoid_: ASCII art, even as "fall back"
+- _Avoid_:  diagrams that only restate a bullet list.
+
+### Code blocks
+
+Code samples in lessons should be syntax-highlighted, not plain monochrome `<pre><code>` dumps. Quizzes, tiny one-liners inside prose, and single-token `<code>` spans do not need a full highlighter — multi-line samples and “read this snippet” sections do.
+
 ### Remote Lessons
 
 If the user says so (eg "I am remote", "Phone friendly", "no PC") create lessons that can be followed without a development environment.
