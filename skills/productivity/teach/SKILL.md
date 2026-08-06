@@ -1,6 +1,6 @@
 ---
 name: teach
-description: Teach the user a new skill or concept, within this workspace.
+description: Teach the user a new skill or concept, within this workspace. Only use if the user explicitly requests it.
 disable-model-invocation: true
 argument-hint: "What would you like to learn about?"
 ---
@@ -47,7 +47,7 @@ Fluency can give the user an illusory sense of mastery, but storage strength is 
 
 ## Lessons
 
-A lesson is the main thing you produce: the unit in which knowledge and skills reach the user. Each lesson is one self-contained HTML file, saved to `./lessons/` and titled `0001-<dash-case-name>.html` where the number increments each time.
+A lesson is the main thing you produce: the unit in which knowledge and skills reach the user. Each lesson is one self-contained HTML file, saved to `./lessons/` and titled `0001-<dash-case-name>.html` where the number increments each time. When creating a new lesson, there is no need to fill the chat with every detail about it: The user will check out the html.
 
 A lesson should be **beautiful**, with clean, readable typography and layout, since the user will return to these later to review. Think Tufte. Wall-to-wall (full bleed left-right).
 
@@ -60,7 +60,6 @@ Each lesson should link via HTML anchors to other lessons, reference documents a
 Each lesson should recommend a primary source for the user to read or watch. This should be the most high-quality, high-trust resource you found on the topic.
 
 Each lesson should contain
-- A reminder to ask followup questions to the agent. The agent is their teacher, and can assist with anything that's unclear.
 - A list of possible subjects for the next lesson
 - A list of possible case studies to explore (if applicable)
 
